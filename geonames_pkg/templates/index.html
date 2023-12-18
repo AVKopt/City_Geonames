@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Поиск</title>
+    <style type="text/css">
+        .data {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .data th, .data td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Введите параметры для поиска:</h1>
+    <form method="post">
+        <label for="city">Название города:</label><br>
+        <input type="text" id="city" name="city"><br>
+        <label for="top_k">Выберите количество записей для вывода:</label><br>
+        <select id="top_k" name="top_k">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+        </select><br>
+        <input type="checkbox" id="adv_spell_check" name="adv_spell_check">
+        <label for="adv_spell_check">Расширенная проверка</label><br>
+        <input type="checkbox" id="output_dict_json" name="output_dict_json">
+        <label for="output_dict_json">Вывод в формате JSON</label><br>
+        <input type="submit" value="Поиск">
+    </form>
+    {% if result_list %}
+        <h2>Результат поиска:</h2>
+        <ul>
+        {% for item in result_list %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if tables %}
+        <h2>Результат поиска:</h2>
+        {% for table in tables %}
+            {{ table|safe }}
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

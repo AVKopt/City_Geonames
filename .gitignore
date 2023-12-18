@@ -1,0 +1,9 @@
+/.ipynb_checkpoints
+/source
+/output
+/datasets
+/geonames_pkg/datasets
+/geonames_pkg/dump_db
+/geonames_pkg/output
+/geonames_pkg/source
+/geonames_pkg/__pycashe__
