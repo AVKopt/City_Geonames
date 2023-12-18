@@ -7,3 +7,4 @@
 /geonames_pkg/output
 /geonames_pkg/source
 /geonames_pkg/__pycashe__
+**/__pycache__/
