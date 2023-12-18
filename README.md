@@ -23,7 +23,7 @@
 
 - Python
 - Pandas
-- Numpu
+- Numpy
 - Gc
 - Json
 - Os
@@ -32,7 +32,7 @@
 - Sentence_transformers
 - Fuzzywuzzy
 - Transliterate
-- Yaspeller
+- YandexSpeller
 
 
 # Вывод
